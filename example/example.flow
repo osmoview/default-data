@@ -1,0 +1,30 @@
+id: example-flow
+name: Пример аналитики
+desc: Простая аналитика добавляющая текст в качестве статуса
+enabled: true
+fps: 1
+active: false
+debug: false
+entrynode: entry
+nodes:
+    - id: entry
+      nodekind_id: camera
+      nodedriver_id: camera
+      pos: [-860, 140]
+    - id: text01
+      nodekind_id: text
+      nodedriver_id: text
+      data:
+        text: status text
+      pos: [-540, 340]
+    - id: screen
+      nodekind_id: screen
+      nodedriver_id: screen
+      pos: [120, 140]
+links:
+    - src: [entry, frame]
+      dst: [screen, frame]
+    - src: [text01, text]
+      dst: [screen, status]
+    
+   

@@ -1,0 +1,43 @@
+id: detector
+
+help: 
+  en: Service detector with predefined address
+  ru: Сервис детектор с фиксированным адресом
+
+label:
+  en: Detector
+  ru: Детектор
+
+# if required to use a different "node" to work with the service, it is a possible to specify it here, by default `node: service`
+node: legacy-detector
+
+# transport and serialize data
+transport: http # http, tcp, udp, unix, exec
+serialize: formdata # json, msgpack, formdata
+
+
+form:
+  - group: network
+    label:
+      en: Network settings
+      ru: Сетевые параметры
+    fields:
+      - name: addr
+        label:
+          en: Address
+          ru: Адрес
+
+
+# ports
+input:
+  - type: frame
+    name: frame
+output:
+  - type: objects
+    name: objects
+    data: [dummy]
+
+# information for the belt
+belt:
+  data:
+    addr: '{{.addr}}'

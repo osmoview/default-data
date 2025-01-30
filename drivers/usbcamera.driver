@@ -1,0 +1,54 @@
+id: usbcamera
+
+label:
+  en: USB camera
+  ru: USB камера
+
+node: camera
+is_datasource: true
+
+grabber: usbcamera
+
+form:
+  - group: addresses
+    label:
+      en: Address
+      ru: Адрес
+    fields:
+      - name: addr
+        label:
+          en: Address
+          ru: Адрес
+
+  - group: decoding
+    label:
+      en: Decoding settings
+      ru: Параметры декодирования
+    fields:
+      - name: fps
+        type: number
+        default: 1
+        label:
+          en: FPS
+          ru: FPS
+        help:
+          en: Frames Per Second
+          ru: Кадров в секунду
+
+      - name: width
+        default: 1280
+        type: number
+        label:
+          en: Width
+          ru: Ширина кадра
+
+      - name: height
+        type: number
+        label:
+          en: Height
+          ru: Высота кадра
+
+belt:
+  runner: systemd
+  target: spot@{{.id}}
+  config: /srv/osmo/spot/config_{{.id}}.yaml

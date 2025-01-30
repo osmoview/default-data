@@ -1,0 +1,10 @@
+id: example-image
+name: Пример камеры
+desc: В качестве источника данных читается изображение с диска
+enabled: false
+
+driver: image
+data:
+    addr: /srv/osmo/ward/data/osmocv.jpg
+    fps: 1
+flows: [example-flow]
