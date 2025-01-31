@@ -1,0 +1,15 @@
+id: main
+name: main
+columns: 4
+widgets:
+    - id: example-image
+      type: camera
+      pos:
+        - 0
+        - 0
+      size:
+        - 2
+        - 2
+      data:
+        datasourceId: example-image
+layouts: {}
