@@ -51,4 +51,4 @@ form:
 belt:
   runner: systemd
   target: spot@{{.id}}
-  config: /srv/osmo/spot/spot/config_{{.id}}.yaml
+  config: /srv/osmo/spot/config_{{.id}}.yaml
