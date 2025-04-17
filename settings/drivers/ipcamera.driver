@@ -10,15 +10,28 @@ is_datasource: true
 grabber: ipcamera
 
 form:
-  - group: addresses
+  - group: network
     label:
-      en: Address
-      ru: Адрес
+      en: Network Settings
+      ru: Сетевые параметры
     fields:
       - name: addr
         label:
           en: Address
           ru: Адрес
+
+      - name: network
+        label:
+          en: Network Protocol
+          ru: Сетевой протокол
+        type: select
+        options: 
+          - label: Auto
+            value: 
+          - label: TCP
+            value: tcp
+          - label: UDP
+            value: udp
 
   - group: decoding
     label:

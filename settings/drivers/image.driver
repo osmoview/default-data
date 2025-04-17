@@ -22,8 +22,8 @@ form:
 
   - group: decoding
     label:
-      en: Decoding settings
-      ru: Параметры декодирования
+      en: Reading Parameters
+      ru: Параметры чтения
     fields:
       - name: fps
         type: number
@@ -32,8 +32,16 @@ form:
           en: FPS
           ru: FPS
         help:
-          en: Frames Per Second
-          ru: Кадров в секунду
+          en: Files Per Second
+          ru: Файлов в секунду
+      - name: remove
+        type: checkbox
+        label:
+          en: Remove Files
+          ru: Удалять файлы
+        help:
+          en: Remove files after read
+          ru: Удалять файлы после чтения
 
 belt:
   runner: systemd
