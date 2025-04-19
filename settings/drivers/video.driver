@@ -1,0 +1,52 @@
+id: video
+
+label:
+  en: Video File
+  ru: Видео Файл
+
+node: camera
+is_datasource: true
+
+grabber: video
+
+form:
+  - group: addresses
+    label:
+      en: Address
+      ru: Адрес
+    fields:
+      - name: addr
+        label:
+          en: Address
+          ru: Адрес
+
+  - group: decoding
+    label:
+      en: Decoding settings
+      ru: Параметры декодирования
+    fields:
+      - name: fps
+        type: number
+        default: 1
+        label:
+          en: FPS
+          ru: FPS
+        help:
+          en: Frames Per Second
+          ru: Кадров в секунду
+      - name: loop
+        type: checkbox
+        default: true
+        label:
+          en: Loop
+          ru: Зациклить
+      - name: realtime
+        type: checkbox
+        label:
+          en: RealTime
+          ru: В реальном времени
+
+belt:
+  runner: systemd
+  target: spot@{{.id}}
+  config: /srv/osmo/spot/config_{{.id}}.yaml

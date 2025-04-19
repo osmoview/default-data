@@ -1,0 +1,36 @@
+id: classifier
+
+help: 
+  en: Service classifier with predefined address
+  ru: Сервис классификатор с фиксированным адресом
+
+label:
+  en: Classifier
+  ru: Классификатор
+
+
+api:
+    - name: predict
+      label:
+        en: Extend
+        ru: Дополнить
+      node: legacy-classifier
+      data:
+        method: POST
+        path: /cvpredict
+
+form:
+  - group: network
+    label:
+      en: Network settings
+      ru: Сетевые параметры
+    fields:
+      - name: addr
+        label:
+          en: Address
+          ru: Адрес
+
+# information for the belt
+belt:
+  data:
+    addr: '{{.addr}}'

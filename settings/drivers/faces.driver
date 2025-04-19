@@ -1,0 +1,33 @@
+id: faces
+desc: default detector driver
+
+label:
+  en: Faces
+  ru: Лица
+
+api:
+  - name: predict
+    label:
+        en: Detect Faces
+        ru: Найти лица
+    node: legacy-faces
+    data:
+      path: /cvpredict
+
+
+form:
+  - group: network
+    label:
+      en: Network settings
+      ru: Сетевые параметры
+    fields:
+      - name: addr
+        label:
+          en: Service Address
+          ru: Адрес сервиса
+
+
+# information for the belt
+belt:
+  data:
+    addr: '{{.addr}}'
