@@ -1,6 +1,6 @@
 id: main
 name: main
-columns: 4
+columns: 24
 widgets:
     - id: example-image
       type: camera
@@ -8,8 +8,8 @@ widgets:
         - 0
         - 0
       size:
-        - 2
-        - 2
+        - 8
+        - 6
       data:
         datasourceId: example-image
 layouts: {}
