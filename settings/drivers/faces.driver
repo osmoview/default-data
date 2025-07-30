@@ -5,6 +5,8 @@ label:
   en: Faces
   ru: Лица
 
+access: internal
+
 api:
   - name: predict
     label:

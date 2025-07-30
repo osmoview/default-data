@@ -8,6 +8,7 @@ label:
   en: Classifier
   ru: Классификатор
 
+access: internal
 
 api:
     - name: predict

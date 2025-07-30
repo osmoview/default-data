@@ -5,6 +5,8 @@ label:
   en: Detector
   ru: Детектор
 
+access: internal
+
 api:
   - name: predict
     label:
