@@ -35,11 +35,6 @@ form:
           - label: UDP
             value: udp
 
-  - group: decoding
-    label:
-      en: Decoding settings
-      ru: Параметры декодирования
-    fields:
       - name: fps
         type: number
         default: 1
@@ -49,6 +44,29 @@ form:
         help:
           en: Frames Per Second
           ru: Кадров в секунду
+
+  - group: substream
+    label:
+      en: SubStream parameters
+      ru: Параметры субпотока
+    fields:
+      - name: substream.addr
+        label:
+          en: SubStream Address
+          ru: Адрес субпотока
+        help:
+          en: If the the sub-stream rtsp address is specified, it will be used to display
+          ru: Если указан адрес суб-потока, он будет использоваться для отображения
+      - name: substream.fps
+        type: number
+        default: 1
+        label:
+          en: FPS
+          ru: FPS
+        help:
+          en: Frames Per Second
+          ru: Кадров в секунду
+
 
 belt:
   runner: systemd
