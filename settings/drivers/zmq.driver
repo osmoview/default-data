@@ -1,0 +1,30 @@
+id: zmq
+
+label:
+  en: ZeroMQ
+  ru: ZeroMQ
+
+node: camera
+is_datasource: true
+
+grabber: zmq
+
+form:
+  - group: addresses
+    label:
+      en: Address
+      ru: Адрес
+    fields:
+      - name: addr
+        label:
+          en: Address
+          ru: Адрес
+        help:
+          en: zeromq publisher address, like: tcp://127.0.0.1:5555
+          ru: адрес zeromq сервера(publisher), в формате: tcp://127.0.0.1:5555
+
+belt:
+  runner: systemd
+  target: spot@{{.id}}
+  conf: 
+    file: /srv/osmo/spot/config_{{.id}}.yaml
