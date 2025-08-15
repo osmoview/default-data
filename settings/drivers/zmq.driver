@@ -20,8 +20,8 @@ form:
           en: Address
           ru: Адрес
         help:
-          en: zeromq publisher address, like: tcp://127.0.0.1:5555
-          ru: адрес zeromq сервера(publisher), в формате: tcp://127.0.0.1:5555
+          en: "zeromq publisher address, like: tcp://127.0.0.1:5555"
+          ru: "адрес zeromq сервера(publisher), в формате: tcp://127.0.0.1:5555"
 
 belt:
   runner: systemd
