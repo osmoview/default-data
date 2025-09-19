@@ -44,6 +44,15 @@ form:
         help:
           en: Remove files after read
           ru: Удалять файлы после чтения
+      - name: loop
+        type: checkbox
+        default: true
+        label:
+          en: Loop
+          ru: Зациклить
+        help:
+          en: Loop image processing from a directory
+          ru: Зациклить обработку изображений из директории
 
 belt:
   runner: systemd
