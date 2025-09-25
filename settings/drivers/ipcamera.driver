@@ -22,7 +22,7 @@ form:
           en: Address
           ru: Адрес
 
-      - name: network
+      - name: net
         label:
           en: Network Protocol
           ru: Сетевой протокол
