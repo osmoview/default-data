@@ -36,6 +36,14 @@ form:
         help:
           en: Frames Per Second
           ru: Кадров в секунду
+      - name: remove
+        type: checkbox
+        label:
+          en: Remove Files
+          ru: Удалять файлы
+        help:
+          en: Remove files after read
+          ru: Удалять файлы после чтения
       - name: loop
         type: checkbox
         default: true
