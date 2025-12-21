@@ -50,6 +50,40 @@ form:
           en: Height
           ru: Высота кадра
 
+  - group: transform
+    label:
+      en: Image Adjustments
+      ru: Настройки изображения
+    fields:
+      - name: rotate
+        type: number
+        default: 0
+        label:
+          en: Rotation
+          ru: Поворот
+        help:
+          en: Rotate image clockwise
+          ru: Повернуть изображение по часовой стрелке
+
+      - name: flip
+        type: select
+        default: ""
+        label:
+          en: Flip
+          ru: Отражение
+        help:
+          en: Flip/mirror the image
+          ru: Отразить изображение
+        options:
+          - label: None
+            value: ""
+          - label: Horizontal
+            value: horizontal
+          - label: Vertical
+            value: vertical
+          - label: Both
+            value: both
+
 belt:
   runner: systemd
   target: spot@{{.id}}
