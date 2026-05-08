@@ -1,0 +1,64 @@
+id: readfile
+
+label:
+  en: Read File
+  ru: Чтение файла
+
+is_datasource: true
+
+grabber: node
+
+form:
+  - group: basic
+    label:
+      en: Basic Parameters
+      ru: Базовые параметры
+    fields:
+      - name: node
+        label:
+          en: Node
+          ru: Узел
+        type: select
+        hook: nodes
+
+      - name: path
+        label:
+          en: File Path
+          ru: Путь к файлу
+        help:
+          en: The path to the file or the directory on the disk
+          ru: Путь до файла, директории на диске
+
+      - name: fps
+        type: number
+        default: 1
+        label:
+          en: FPS
+          ru: FPS
+        help:
+          en: File reading frequency
+          ru: Частота чтения файла
+        
+      - name: player
+        label:
+          en: Player
+          ru: Способ отображения
+        default: frames
+        type: select
+        options:
+          - label: Frames
+            value: frames
+          - label: Table
+            value: table
+          - label: Chat
+            value: chat
+          - label: Editor
+            value: editor
+          - label: Markdown
+            value: markdown
+
+belt:
+  runner: systemd
+  target: spot@{{.id}}
+  conf: 
+    file: /srv/osmo/spot/config_{{.id}}.yaml
