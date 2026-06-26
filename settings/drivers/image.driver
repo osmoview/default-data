@@ -18,6 +18,7 @@ form:
       ru: Адрес
     fields:
       - name: addr
+        type: upload
         label:
           en: Address
           ru: Адрес

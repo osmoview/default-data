@@ -22,6 +22,7 @@ form:
         hook: nodes
 
       - name: path
+        type: upload
         label:
           en: File Path
           ru: Путь к файлу
