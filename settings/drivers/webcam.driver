@@ -1,0 +1,31 @@
+id: webcam
+
+label:
+  en: WebCamera
+  ru: Веб-камера
+
+node: camera
+is_datasource: true
+
+player: webcam
+
+grabber: node
+
+form:
+  - group: camera-parameters
+    label:
+      en: Address
+      ru: Адрес
+    fields:
+      - name: fps
+        type: number
+        default: 1
+        label:
+          en: FPS
+          ru: FPS
+
+belt:
+  runner: systemd
+  target: spot@{{.id}}
+  conf: 
+    file: /srv/osmo/spot/config_{{.id}}.yaml
