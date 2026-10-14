@@ -36,12 +36,15 @@ widgets:
   - id: wgt-events
     type: events
     pos:
-      - 6
+      - 7
       - 5
     size:
-      - 11
+      - 10
       - 7
     data:
+      filter:
+        limit: 20.0
+        time_at: "2026-10-07"
       limit: 30.0
   - id: wgt-info-disks
     type: info
