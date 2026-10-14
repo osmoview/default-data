@@ -1,0 +1,56 @@
+id: main
+name: Main
+icon: FaHome
+columns: 24
+widgets:
+  - id: wgt-info-cpu
+    type: characteristics
+    pos:
+      - 6
+      - 1
+    size:
+      - 6
+      - 2
+    data:
+      params: cpu
+  - id: wgt-info-ram
+    type: characteristics
+    pos:
+      - 12
+      - 3
+    size:
+      - 6
+      - 2
+    data:
+      params: ram
+  - id: wgt-info-time
+    type: info
+    pos:
+      - 0
+      - 3
+    size:
+      - 6
+      - 2
+    data:
+      params: time
+  - id: wgt-events
+    type: events
+    pos:
+      - 6
+      - 5
+    size:
+      - 11
+      - 7
+    data:
+      limit: 30.0
+  - id: wgt-info-disks
+    type: info
+    pos:
+      - 18
+      - 2
+    size:
+      - 6
+      - 2
+    data:
+      params: disks
+layouts: {}

@@ -1,0 +1,17 @@
+id: events
+name: Events
+columns: 4
+widgets:
+  - id: events_list
+    type: events
+    pos:
+      - 0
+      - 6
+    size:
+      - 4
+      - 6
+    data:
+      fill: true
+      filter:
+        limit: 30.0
+layouts: {}
