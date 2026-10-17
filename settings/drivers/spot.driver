@@ -1,0 +1,17 @@
+id: spot
+
+label:
+  en: Spot
+  ru: Spot
+
+help: 
+  en: Is a dummy spot driver for launching a spot, it is used to launch active flows, charts, and services-datasources.
+  ru: Драйвер "пустышка" для запуска спота, используется для запуска активных аналитик, графиков и сервисов-датасорсов.
+
+access: internal
+
+belt:
+  runner: systemd
+  target: spot@{{.id}}
+  conf: 
+    file: /srv/osmo/spot/config_{{.id}}.yaml
